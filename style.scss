@@ -30,14 +30,17 @@ header{
       }
     }
   }
-#activityButtons {
-    width: 75%;
-    margin-left: 25%;
+.wrapper{
+  width: 100%;
+}
+.togglebuttons{
+  width: 70%;
+  display: inline-block;
+  vertical-align: top;
 
-  &> button.octicon.octicon-pencil{
-    position: relative;
+  button.octicon.octicon-pencil{
     display: inline-block;
-    padding: 6px 12px;
+    margin-left: 13%;
     font-size: 13px;
     font-weight: bold;
     line-height: 20px;
@@ -49,7 +52,6 @@ header{
     border: 1px solid #d5d5d5;
     border-radius: 3px;
     padding: 2px 10px;
-    margin-left: 25%;
     &:hover {
       background-color: #d5d5d5;
     }
@@ -57,20 +59,20 @@ header{
 }
 
 .repoNav {
-  width: 75%;
-  margin-left: 25%;
+  width: 70%;
+  display: inline-block;
   ul {
     margin: 0;
     padding: 0;
-    &> li {
+    li {
       display: inline-block;
       padding: 5px;
-      &>input {
+      input {
         width: 250px;
         height: 30px;
         padding: 10px;
         }
-      &>button{
+      button{
           position: relative;
           display: inline-block;
           padding: 6px 12px;
@@ -87,12 +89,12 @@ header{
             background-color: #d5d5d5;
           }
         }
-      &>a {
+      a {
         color: #4078c0;
         text-decoration: none;
         }
       }
-      &>button{
+      button{
         color: #fff;
         text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
         background-color: #8add6d;
@@ -106,6 +108,8 @@ header{
     }
   }
 .repository {
+  display: inline-block;
+  width: 70%;
   ul {
     position: relative;
     li {
@@ -143,24 +147,45 @@ header{
     }
   }
 }
-aside{
-  float:left;
-  width:25%;
+.sidebar{
+  display: inline-block;
+  width:28%;
   box-sizing:border-box;
   padding-right:1em;
   min-height:500px;
-  img:nth-child(1){
+  img{
     width:100%;
     border-radius:5px;
   }
-  span{
-    display:block;
+  li{
+    display:inline-block;
+    }
+    .name {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 26px;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    }
+    .username {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    text-overflow: ellipsis;
+    }
+    .organizations>img {
+        width: 32px;
+      }
+    .following, .followers {
+      font-size: 45px;
+      color: #4078c0;
+      display: inline-block;
+    }
+
   }
-  p{
-    border-bottom:1px solid lightgrey;
-    padding-bottom:1em;
-  }
-  p:nth-child(5){
-    border:none;
-  }
-}

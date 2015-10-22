@@ -23,13 +23,16 @@ header {
       width: 32px;
       margin-right: 5px; }
 
-#activityButtons {
-  width: 75%;
-  margin-left: 25%; }
-  #activityButtons > button.octicon.octicon-pencil {
-    position: relative;
+.wrapper {
+  width: 100%; }
+
+.togglebuttons {
+  width: 70%;
+  display: inline-block;
+  vertical-align: top; }
+  .togglebuttons button.octicon.octicon-pencil {
     display: inline-block;
-    padding: 6px 12px;
+    margin-left: 13%;
     font-size: 13px;
     font-weight: bold;
     line-height: 20px;
@@ -40,25 +43,24 @@ header {
     background-color: #eee;
     border: 1px solid #d5d5d5;
     border-radius: 3px;
-    padding: 2px 10px;
-    margin-left: 25%; }
-    #activityButtons > button.octicon.octicon-pencil:hover {
+    padding: 2px 10px; }
+    .togglebuttons button.octicon.octicon-pencil:hover {
       background-color: #d5d5d5; }
 
 .repoNav {
-  width: 75%;
-  margin-left: 25%; }
+  width: 70%;
+  display: inline-block; }
   .repoNav ul {
     margin: 0;
     padding: 0; }
-    .repoNav ul > li {
+    .repoNav ul li {
       display: inline-block;
       padding: 5px; }
-      .repoNav ul > li > input {
+      .repoNav ul li input {
         width: 250px;
         height: 30px;
         padding: 10px; }
-      .repoNav ul > li > button {
+      .repoNav ul li button {
         position: relative;
         display: inline-block;
         padding: 6px 12px;
@@ -71,63 +73,84 @@ header {
         cursor: pointer;
         background-color: #eee;
         cursor: pointer; }
-        .repoNav ul > li > button:hover {
+        .repoNav ul li button:hover {
           background-color: #d5d5d5; }
-      .repoNav ul > li > a {
+      .repoNav ul li a {
         color: #4078c0;
         text-decoration: none; }
-    .repoNav ul > button {
+    .repoNav ul button {
       color: #fff;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
       background-color: #8add6d;
       border-color: #5ca941;
       padding: 6px 12px;
       margin-left: 4%; }
-      .repoNav ul > button:hover {
+      .repoNav ul button:hover {
         background-color: #60b044; }
 
-.repository ul {
-  position: relative; }
-  .repository ul li {
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    list-style: none;
-    border-bottom: 1px solid #eee; }
-    .repository ul li .stats {
-      margin-top: 6px;
-      margin-right: 18%;
-      float: right;
-      font-size: 12px;
-      font-weight: bold;
-      color: #888; }
-      .repository ul li .stats a {
+.repository {
+  display: inline-block;
+  width: 70%; }
+  .repository ul {
+    position: relative; }
+    .repository ul li {
+      position: relative;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      list-style: none;
+      border-bottom: 1px solid #eee; }
+      .repository ul li .stats {
+        margin-top: 6px;
+        margin-right: 18%;
+        float: right;
+        font-size: 12px;
+        font-weight: bold;
         color: #888; }
-    .repository ul li h3 a {
-      color: #4078c0;
-      text-decoration: none;
-      padding-left: 5px; }
-    .repository ul li p {
-      display: block;
-      margin-top: 8px;
-      margin-bottom: 0;
-      font-size: 16px;
-      color: #888;
-      padding-left: 5px; }
+        .repository ul li .stats a {
+          color: #888; }
+      .repository ul li h3 a {
+        color: #4078c0;
+        text-decoration: none;
+        padding-left: 5px; }
+      .repository ul li p {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: #888;
+        padding-left: 5px; }
 
-aside {
-  float: left;
-  width: 25%;
+.sidebar {
+  display: inline-block;
+  width: 28%;
   box-sizing: border-box;
   padding-right: 1em;
   min-height: 500px; }
-  aside img:nth-child(1) {
+  .sidebar img {
     width: 100%;
     border-radius: 5px; }
-  aside span {
-    display: block; }
-  aside p {
-    border-bottom: 1px solid lightgrey;
-    padding-bottom: 1em; }
-  aside p:nth-child(5) {
-    border: none; }
+  .sidebar li {
+    display: inline-block; }
+  .sidebar .name {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 26px;
+    line-height: 30px;
+    text-overflow: ellipsis; }
+  .sidebar .username {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    text-overflow: ellipsis; }
+  .sidebar .organizations > img {
+    width: 32px; }
+  .sidebar .following, .sidebar .followers {
+    font-size: 45px;
+    color: #4078c0;
+    display: inline-block; }
